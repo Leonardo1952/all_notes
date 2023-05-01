@@ -1,3 +1,4 @@
+import 'package:all_notes/app/components/add_button_component.dart';
 import 'package:all_notes/app/components/card_components.dart';
 import 'package:all_notes/app/core/app_colors.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +30,8 @@ class _HomePageState extends State<HomePage> {
                     text:
                         'fdgbnfibgifdi  hfdighdfgbfd  fdohgiofdso sdhfgiofdg fdg dh dsj shdih',
                     backgroundColor: AppColors.orangePastel,
-                  )
+                  ),
+                  AddButtonComponent()
                 ],
               )
             ],
