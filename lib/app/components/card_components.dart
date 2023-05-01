@@ -1,28 +1,38 @@
+import 'package:all_notes/app/core/app_padding.dart';
+import 'package:all_notes/app/core/app_sizes.dart';
+import 'package:all_notes/app/core/app_style.dart';
 import 'package:flutter/material.dart';
 
 class CardComponent extends StatelessWidget {
-  const CardComponent({super.key});
+  final String title;
+  final String text;
+  final Color backgroundColor;
+  const CardComponent(
+      {super.key,
+      required this.title,
+      required this.text,
+      required this.backgroundColor});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(10.0),
+      padding: AppPadding.a10,
       child: Container(
-        width: 150,
-        height: 200,
+        width: AppSizes.maxWidth,
+        height: AppSizes.maxHeight,
         decoration: BoxDecoration(
-            color: Colors.orange, borderRadius: BorderRadius.circular(12)),
+            color: backgroundColor, borderRadius: BorderRadius.circular(12)),
         child: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: AppPadding.a10,
           child: Column(
-            children: const [
+            children: [
               Text(
-                'Titulo',
-                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                title,
+                style: AppStyle.titleCard(),
                 overflow: TextOverflow.ellipsis,
               ),
               Text(
-                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+                text,
                 overflow: TextOverflow.ellipsis,
                 maxLines: 10,
               )

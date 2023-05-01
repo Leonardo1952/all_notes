@@ -1,4 +1,5 @@
 import 'package:all_notes/app/components/card_components.dart';
+import 'package:all_notes/app/core/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -22,7 +23,14 @@ class _HomePageState extends State<HomePage> {
           child: Row(
             children: [
               Column(
-                children: const [CardComponent()],
+                children: const [
+                  CardComponent(
+                    title: 'Card de exemplo',
+                    text:
+                        'fdgbnfibgifdi  hfdighdfgbfd  fdohgiofdso sdhfgiofdg fdg dh dsj shdih',
+                    backgroundColor: AppColors.orangePastel,
+                  )
+                ],
               )
             ],
           ),
