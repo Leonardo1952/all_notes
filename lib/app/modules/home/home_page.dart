@@ -1,3 +1,4 @@
+import 'package:all_notes/app/components/card_components.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -21,7 +22,7 @@ class _HomePageState extends State<HomePage> {
           child: Row(
             children: [
               Column(
-                children: [Text('Initial')],
+                children: const [CardComponent()],
               )
             ],
           ),

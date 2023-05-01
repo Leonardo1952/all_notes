@@ -1,4 +1,4 @@
-import 'package:all_notes/app/modules/home_page.dart';
+import 'package:all_notes/app/modules/home/home_page.dart';
 import 'package:flutter/material.dart';
 
 class AppWidget extends StatelessWidget {
