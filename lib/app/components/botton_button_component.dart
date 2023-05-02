@@ -2,14 +2,14 @@ import 'package:all_notes/app/core/app_colors.dart';
 import 'package:all_notes/app/core/app_sizes.dart';
 import 'package:flutter/material.dart';
 
-class AddButtonComponent extends StatefulWidget {
-  const AddButtonComponent({super.key});
+class BottonButtonsComponent extends StatefulWidget {
+  const BottonButtonsComponent({super.key});
 
   @override
-  State<AddButtonComponent> createState() => _AddButtonComponentState();
+  State<BottonButtonsComponent> createState() => _BottonButtonsComponentState();
 }
 
-class _AddButtonComponentState extends State<AddButtonComponent>
+class _BottonButtonsComponentState extends State<BottonButtonsComponent>
     with TickerProviderStateMixin {
   late AnimationController _controller;
 

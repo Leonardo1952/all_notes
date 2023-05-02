@@ -1,4 +1,5 @@
-import 'package:all_notes/app/components/add_button_component.dart';
+import 'package:all_notes/app/components/botton_button_component.dart';
+import 'package:all_notes/app/components/botton_color.dart';
 import 'package:all_notes/app/components/card_components.dart';
 import 'package:all_notes/app/core/app_colors.dart';
 import 'package:all_notes/app/core/app_padding.dart';
@@ -13,6 +14,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  bool isCreate = false;
+  Color backgroundCard = AppColors.greenPastel;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,12 +62,22 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          Visibility(child: const NewNote()),
+          Visibility(
+              child: NewNote(
+            backgroundColor: backgroundCard,
+          )),
+          Column(
+            children: const [
+              BottonColor(backgroundColor: AppColors.bluePastel),
+              BottonColor(backgroundColor: AppColors.redPastel),
+              BottonColor(backgroundColor: AppColors.orangePastel),
+            ],
+          ),
           const Align(
             alignment: AlignmentDirectional.bottomEnd,
             child: Padding(
               padding: AppPadding.a10,
-              child: AddButtonComponent(),
+              child: BottonButtonsComponent(),
             ),
           ),
         ],

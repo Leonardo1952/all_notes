@@ -3,7 +3,8 @@ import 'package:all_notes/app/core/app_padding.dart';
 import 'package:flutter/material.dart';
 
 class NewNote extends StatelessWidget {
-  const NewNote({super.key});
+  final Color backgroundColor;
+  const NewNote({super.key, required this.backgroundColor});
 
   @override
   Widget build(BuildContext context) {
@@ -13,8 +14,7 @@ class NewNote extends StatelessWidget {
         padding: const EdgeInsets.all(25.0),
         child: Container(
           decoration: BoxDecoration(
-              color: AppColors.greenPastel,
-              borderRadius: BorderRadius.circular(12)),
+              color: backgroundColor, borderRadius: BorderRadius.circular(12)),
           child: Padding(
             padding: AppPadding.a10,
             child: Column(
