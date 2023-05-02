@@ -1,3 +1,5 @@
+import 'package:all_notes/app/core/app_colors.dart';
+import 'package:all_notes/app/core/app_sizes.dart';
 import 'package:flutter/material.dart';
 
 class AddButtonComponent extends StatefulWidget {
@@ -36,12 +38,12 @@ class _AddButtonComponentState extends State<AddButtonComponent>
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(30),
-            color: Colors.blueAccent,
+            color: AppColors.darkBlue,
           ),
           child: const Icon(
             Icons.add,
-            size: 50,
-            color: Colors.white,
+            size: AppSizes.iconPlus,
+            color: AppColors.pureWhite,
           ),
         ),
       ),
